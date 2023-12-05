@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <!--Favicon-->
+  <link href="images/sellHere2.jpg" rel="icon">
+  <!-- Add Bootstrap CSS link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body class="text-bg-warning bg-opacity-25">
+  <!-- Nav bar -->
+  <nav class="nav navbar navbar-expand-lg text-bg-danger col-12">
+    <div class="container">
+      <img src="/images/sellHere2.jpg" alt="brand-image" class=" img-fluid rounded-circle me-3" width="45px"
+        height="45px">
+      <a href="/" class="navbar-brand">
+        <h2 class="fw-bold fst-italic">Sell <span class="text-danger fs-1">H</span>ere</h2>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link fs-4 dropdown-toggle" href="#" id="adminDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Admin
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="adminDropdown">
+              <li>
+                <a href="#" class="dropdown-item fs-5" data-bs-toggle="modal" data-bs-target="#adminsignin-modal"
+                  aria-controls="adminsignin-modal">Sign in</a>
+              </li>
+              <li>
+                <a href="#" class="dropdown-item fs-5" data-bs-toggle="modal" data-bs-target="#adminsignup-modal"
+                  aria-controls="adminsignup-modal">Sign up</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link fs-4 dropdown-toggle" href="#" id="customerDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Customer
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="customerDropdown">
+              <li>
+                <a href="#" class="dropdown-item fs-5" data-bs-toggle="modal" data-bs-target="#customersignin-modal"
+                  aria-controls="customersignin-modal">Sign in</a>
+              </li>
+              <li>
+                <a href="#" class="dropdown-item fs-5" data-bs-toggle="modal" data-bs-target="#customersignup-modal"
+                  aria-controls="customersignup-modal">Sign up</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-4" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-4" href="#">Updates</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-4" href="#">Contact Us</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container col-lg-5 mt-5">
+    <div class="card bg-warning bg-opacity-50 ">
+      <div class="card-body container">
+        <div class="btn-group d-flex">
+          <a href="" class="btn btn-outline-primary m-2" data-bs-toggle="modal" data-bs-target="#adminsignin-modal"
+            aria-controls="adminsignup-form">
+            <h3 class="fst-italic">I am a Admin</h3>
+          </a>
+          <a href="" class="btn btn-outline-success m-2" data-bs-toggle="modal" data-bs-target="#customersignin-modal"
+            aria-controls="customersignin-modal">
+            <h3 class="fst-italic">I am a Customer</h3>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container col-lg-8 mt-5">
+    <div class="card">
+      <div class="card-header bg-black text-white text-center pt-3 pb-3">
+        <h2 class="text-decoration-underline"> Your Ultimate Ecommerce Destination</h2>
+      </div>
+      <div class="card-body">
+        <div class="card-text  fs-4 fst-italic">
+          Welcome to SellHere, the game-changing ecommerce platform that is redefining the way you shop online. Founded
+          in 2023 by visionary entrepreneur Mufil Rahman, SellHere is owned and operated by SellHere Pvt Ltd. With an
+          impressive customer base of over 1 million satisfied shoppers and partnerships with 400 renowned brands,
+          SellHere has quickly become the go-to destination for online retail therapy.
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <!--Models-->
+  <!--Admin Signin modal-->
+  <div class="modal fade " id="adminsignin-modal">
+    <div class="modal-dialog modal-dialog-centered ">
+      <div class="modal-content">
+        <div class="modal-header text-bg-warning bg-opacity-50 text-black">
+          <h2 id="formhead">Sign in as Admin</h2>
+          <button class="btn btn-close" data-bs-dismiss="modal" data-bs-target="#adminsignin-modal"></button>
+        </div>
+        <div class="modal-body text-bg-warning bg-opacity-25 text-black">
+          <!--Sigin form-->
+          <form autocomplete="on" id="adminsignin_form">
+            <div class="form-group mt-3">
+              <label for="userName"><i class="fas fa-user"></i> Email</label>
+              <input type="text" class="form-control" name="Email" placeholder="Email" required>
+            </div>
+            <div class="form-group mt-3">
+              <label for="password"><i class="fas fa-lock"></i> Password</label>
+              <input type="password" class="form-control" name="Password" placeholder="Password">
+            </div>
+            <div class="form-group text-center mt-4">
+              <input type="submit" class="btn btn-warning submit" value="Sign in">
+            </div>
+            <div class="form-group text-center mt-2">
+              <a href="#" id="forgot-password-button" data-bs-dismiss="modal" data-bs-toggle="modal"
+                data-bs-target="#adminforgotdModal">Forgot password?</a>
+            </div>
+            <div class="form-group text-center mt-2">
+              Not a member? <a href="#" data-bs-dismiss="modal" data-bs-toggle="modal"
+                data-bs-target="#adminsignup-modal">Signup now</a>
+            </div>
+            <div class="alert bg-warning alert-dismissible fade show mt-3 d-none" role="alert" id="alert1">
+              <strong>Hi user!</strong> user is not exist go to sign up page.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <div class="alert bg-danger alert-dismissible fade show mt-3 d-none" role="alert" id="alert2">
+              <strong>Hi user!</strong> password incorrect try again.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <div class="alert bg-success alert-dismissible fade show mt-3 d-none " role="alert" id="alert3">
+              <strong>Hi user!</strong> Successfully logged in.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Admin Signup modal-->
+  <div class="modal fade" id="adminsignup-modal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content ">
+        <div class="modal-header text-bg-primary bg-opacity-50 text-black">
+          <h3>Create Your Admin Account</h3>
+          <button class="btn btn-close" data-bs-dismiss="modal" data-bs-target="#adminsignup-modal"></button>
+        </div>
+        <div class="modal-body text-bg-primary bg-opacity-25 text-black">
+          <form autocomplete="on" id="adminsignup_form">
+            <div class="form-group mt-3">
+              <label for="Name"><i class="fas fa-user-astronaut "></i>Name</label>
+              <input type="text" class="form-control" name="Name" placeholder="Name" required>
+            </div>
+            <div class="form-group mt-3">
+              <label for="userName"><i class="fas fa-user"></i> Email</label>
+              <input type="text" class="form-control" name="Email" placeholder="Email" required>
+            </div>
+            <div class="form-group mt-3">
+              <label for="phoneNumber"><i class="fas fa-phone"></i> Phone Number</label>
+              <input type="tel" class="form-control" name="PhoneNumber" placeholder="Phone Number" pattern="^\d{10}$"
+                title="Phone number must be exactly 10 digits" required>
+            </div>
+
+            <div class="form-group mt-3">
+              <label for="password"><i class="fas fa-lock"></i> Enter a Password</label>
+              <input type="password" class="form-control" name="Password1" placeholder="Password" pattern=".{5,}"
+                title="Password should contain a minimum of 5 characters" required>
+            </div>
+            <div class="form-group mt-3">
+              <label for="password"><i class="fas fa-lock"></i> Re-enter your password</label>
+              <input type="password" class="form-control" name="Password2" placeholder="Password" required>
+            </div>
+            <div class="form-group text-center mt-4 ">
+              <input type="submit" class="btn btn-primary submit" value="Sign Up">
+            </div>
+            <div class="form-group text-center mt-2">
+              Already member? <a href="#" data-bs-dismiss="modal" data-bs-toggle="modal"
+                data-bs-target="#adminsignin-modal">Signin here</a>
+            </div>
+
+            <div class="alert bg-warning alert-dismissible fade show mt-3 d-none" role="alert" id="alert1">
+              <strong>Hi user!</strong> Account is already exist go to sign in page.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <div class="alert bg-danger bg-opacity-75 alert-dismissible fade show mt-3 d-none" role="alert" id="alert2">
+              <strong>Hi user!</strong> both password should be same.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <div class="alert bg-success alert-dismissible fade show mt-3 d-none" role="alert" id="alert3">
+              <strong>Hi user!</strong> Sign up successfull redirecting to profile.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Admin Forgot Password Modal-->
+  <div class="modal fade" id="adminforgotdModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content ">
+        <div class="modal-header text-bg-danger bg-opacity-50 text-black" id="headDiv">
+          <h2>Reset Your Password</h2>
+          <button class="btn btn-close" data-bs-dismiss="modal" data-bs-target="#forgotPasswordModal"></button>
+        </div>
+        <div class="modal-body text-bg-danger bg-opacity-25 text-black">
+          <!--Forgot form-->
+          <form autocomplete="on" id="adminforgot_form">
+            <div class="form-group mt-3">
+              <label for="userName"><i class="fas fa-user"></i> Email</label>
+              <input type="text" class="form-control" name="Email" placeholder="Email" required>
+            </div>
+            <div class="form-group text-center mt-4">
+              <input type="submit" class="btn btn-danger submit" value="Submit">
+            </div>
+            <div class="alert bg-warning alert-dismissible fade show mt-3 d-none" role="alert" id="alert1">
+              <strong>Holy guacamole!</strong> user is not exist enter correct credentials.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <div class="alert bg-success alert-dismissible fade show mt-3 d-none" role="alert" id="alert2">
+              <strong>Holy guacamole!</strong> Check mail for resetting password.
+              <span class="text-warning">link is valid for 5 min</span>
+              <button type="button" href="/home" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Customer Signin modal-->
+  <div class="modal fade " id="customersignin-modal">
+    <div class="modal-dialog modal-dialog-centered ">
+      <div class="modal-content">
+        <div class="modal-header text-bg-warning bg-opacity-50 text-black">
+          <h2 id="formhead">Sign in as a Customer</h2>
+          <button class="btn btn-close" data-bs-dismiss="modal" data-bs-target="#customersignin_modal"></button>
+        </div>
+        <div class="modal-body text-bg-warning bg-opacity-25 text-black">
+          <!--Sigin form-->
+          <form autocomplete="on" id="customersignin_form">
+            <div class="form-group mt-3">
+              <label for="userName"><i class="fas fa-user"></i> Email</label>
+              <input type="text" class="form-control" name="Email" placeholder="Email" required>
+            </div>
+            <div class="form-group mt-3">
+              <label for="password"><i class="fas fa-lock"></i> Password</label>
+              <input type="password" class="form-control" name="Password" placeholder="Password" required>
+            </div>
+            <div class="form-group text-center mt-4">
+              <input type="submit" class="btn btn-warning submit" value="Sign in">
+            </div>
+            <div class="form-group text-center mt-2">
+              <a href="#" id="forgot-password-button" data-bs-dismiss="modal" data-bs-toggle="modal"
+                data-bs-target="#customerforgotdModal">Forgot password?</a>
+            </div>
+            <div class="form-group text-center mt-2">
+              Not a member? <a href="#" data-bs-dismiss="modal" data-bs-toggle="modal"
+                data-bs-target="#customersignup-modal">Signup now</a>
+            </div>
+            <div class="alert bg-warning alert-dismissible fade show mt-3 d-none" role="alert" id="alert1">
+              <strong>Hi User!</strong> user is not exist go to sign up page.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <div class="alert bg-danger alert-dismissible fade show mt-3 d-none" role="alert" id="alert2">
+              <strong>Hi User!</strong> password incorrect try again.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <div class="alert bg-success alert-dismissible fade show mt-3 d-none " role="alert" id="alert3">
+              <strong>Hi User!</strong> Successfully logged in.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Customer Signup modal-->
+  <div class="modal fade" id="customersignup-modal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content ">
+        <div class="modal-header text-bg-primary bg-opacity-50 text-black">
+          <h3>Create Your Customer Account</h3>
+          <button class="btn btn-close" data-bs-dismiss="modal" data-bs-target="#customersignup-modal"></button>
+        </div>
+        <div class="modal-body text-bg-primary bg-opacity-25 text-black">
+          <form autocomplete="on" id="customersignup_form">
+            <div class="form-group mt-3">
+              <label for="Name"><i class="fas fa-user-astronaut "></i>Name</label>
+              <input type="text" class="form-control" name="Name" placeholder="Name" required>
+            </div>
+            <div class="form-group mt-3">
+              <label for="userName"><i class="fas fa-user"></i> Email</label>
+              <input type="text" class="form-control" name="Email" placeholder="Email" required>
+            </div>
+            <div class="form-group mt-3">
+              <label for="phoneNumber"><i class="fas fa-phone"></i> Phone Number</label>
+              <input type="tel" class="form-control" name="PhoneNumber" placeholder="Phone Number" required
+                pattern="^\d{10}$" title="Phone number must be exactly 10 digits">
+            </div>
+
+            <div class="form-group mt-3">
+              <label for="password"><i class="fas fa-lock"></i> Enter a Password</label>
+              <input type="password" class="form-control" name="Password1" placeholder="Password" pattern=".{5,}"
+                title="Password should contain a minimum of 5 characters" required>
+            </div>
+            <div class="form-group mt-3">
+              <label for="password"><i class="fas fa-lock"></i> Re-enter your password</label>
+              <input type="password" class="form-control" name="Password2" placeholder="Password" required>
+            </div>
+            <div class="form-group text-center mt-4 ">
+              <input type="submit" class="btn btn-primary submit" value="Sign Up">
+            </div>
+            <div class="form-group text-center mt-2">
+              Already member? <a href="#" data-bs-dismiss="modal" data-bs-toggle="modal"
+                data-bs-target="#customersignin-modal">Signin here</a>
+            </div>
+
+            <div class="alert bg-warning alert-dismissible fade show mt-3 d-none" role="alert" id="alert1">
+              <strong>Hi user!</strong> user is already exist go to sign in page.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <div class="alert bg-danger bg-opacity-75 alert-dismissible fade show mt-3 d-none" role="alert" id="alert2">
+              <strong>Hi user!</strong> both password should be same.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <div class="alert bg-success alert-dismissible fade show mt-3 d-none" role="alert" id="alert3">
+              <strong>Hi user!</strong> Sign up successfull redirecting to profile.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Customer Forgot Password Modal-->
+  <div class="modal fade" id="customerforgotdModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content ">
+        <div class="modal-header text-bg-danger bg-opacity-50 text-black" id="headDiv">
+          <h2>Reset Your Password</h2>
+          <button class="btn btn-close" data-bs-dismiss="modal" data-bs-target="#forgotPasswordModal"></button>
+        </div>
+        <div class="modal-body text-bg-danger bg-opacity-25 text-black">
+          <!--Forgot form-->
+          <form autocomplete="on" id="customerforgot_form">
+            <div class="form-group mt-3">
+              <label for="userName"><i class="fas fa-user"></i> Email</label>
+              <input type="text" class="form-control" name="Email" placeholder="Email" required>
+            </div>
+            <div class="form-group text-center mt-4">
+              <input type="submit" class="btn btn-danger submit" value="Submit">
+            </div>
+            <div class="alert bg-warning alert-dismissible fade show mt-3 d-none" role="alert" id="alert1">
+              <strong>Holy guacamole!</strong> user is not exist enter correct credentials.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <div class="alert bg-success alert-dismissible fade show mt-3 d-none" role="alert" id="alert2">
+              <strong>Holy guacamole!</strong> Check mail for resetting password.
+              <span class="text-warning">link is valid for 5 min</span>
+              <button type="button"  class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=" p-5"></div>
+  <footer class="bg-light py-4 fixed-bottom">
+    <!-- Footer Content Here -->
+    <div class="container text-center">
+      <p>&copy; 2023 SellHere. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+  <script type="module" src="/js/home.js"></script>
+  <script type="module" src="/js/helperFunctions.mjs"></script>
+
+</body>
+
+</html>

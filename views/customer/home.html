@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Home</title>
+    <!--Favicon-->
+    <link href="images/sellHere2.jpg" rel="icon">
+  <!-- Add Bootstrap CSS link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css">
+  <link rel="stylesheet" href="/css/listp.css">
+</head>
+
+<body class="text-bg-warning bg-opacity-25">
+
+  <nav class="nav navbar navbar-expand-lg text-bg-danger col-12">
+    <div class="container">
+      <img src="/images/sellHere2.jpg" alt="brand-image" class=" img-fluid rounded-circle me-3" width="45px"
+        height="45px">
+      <a href="" class="navbar-brand">
+        <h2 class="fw-bold fst-italic">Sell <span class="text-danger fs-1">H</span>ere</h2>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto">
+          <a class="nav-link fs-4 active" id="product-page-list" data-bs-toggle="list" href="#product-page" role="tab"
+            aria-controls="product-page">Products</a>
+          <a class="nav-link fs-4" id="cart-page-list" data-bs-toggle="list" href="#cart-page" role="tab"
+            aria-controls="cart-page">Cart</a>
+          <a class="nav-link fs-4" id="order-history-list" data-bs-toggle="list" href="#order-history" role="tab"
+            aria-controls="order-history">Order History</a>
+          <a href="#" class="nav-link fs-4">Account</a>
+          <a href="/" class="nav-link fs-4">Log Out</a>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid mt-3 p-0 p-md-1 p-lg-3">
+    <div class="tab-content" id="nav-tabContent">
+      <!-- Product Page-->
+      <div class="tab-pane fade show active" id="product-page" role="tabpanel" aria-labelledby="product-page-list">
+        <div class="container pb-3">
+          <h1 class="text-center">Products</h1>
+        </div>
+        <div class=" row min-vh-100" id="productPlaceholder">
+          <!-- Add more product cards as needed -->
+        </div>
+        <div class="container" id="pagination_div">
+          <div class=" d-flex justify-content-between">
+            <div class="">
+              <ul class="pagination">
+                <li class="page-item "><a class="page-link" href="#" id="previousBtn">Previous</a></li>
+              </ul>
+            </div>
+            <div class=" text-center ms-2 me-2">
+              <select class="form-select text-center " id="noProductsSelect">
+                <option disabled selected value="5" class="text-nowrap">No of products in a page</option>
+                <option value="5"> 5</option>
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+              </select>
+            </div>
+            <div class="">
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#" id="nextBtn">Next</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- cart Page-->
+      <div class="tab-pane fade min-vh-100" id="cart-page" role="tabpanel" aria-labelledby="cart-page-list">
+        <div class="container pb-3">
+          <h1 class="text-center ">Shopping Cart</h1>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 container table-responsive">
+            <table class="table table-bordered mt-3">
+              <thead>
+                <tr cl>
+                  <th class="col-1">#</th>
+                  <th class="col-4">Item</th>
+                  <th class="col-3">Price</th>
+                  <th class="col-2 text-center">Quantity</th>
+                  <th class="col-2 text-center">Action</th>
+                </tr>
+              </thead>
+              <tbody id="tableBody" class="text-nowrap">
+                <!-- Add more items here -->
+              </tbody>
+            </table>
+          </div>
+          <div class="col-lg-3 container">
+            <div class="card">
+              <div class="card-header">
+                <h3>Order Summary</h3>
+              </div>
+              <div class="card-body ps-4">
+                <h5 class="card-title">Total Price:</h5>
+                <p class="card-text">&#8377;<span id="totalPlaceholder">10.00</span></p>
+                <h5 class="card-title">Tax:</h5>
+                <p class="card-text">&#8377;<span id="taxPlaceholder">1.00</span></p>
+                <h5 class="card-title">Grand Total:</h5>
+                <p class="card-text">&#8377;<span id="grandTotalPlaceholder">11.00</span></p>
+                <div class="text-center">
+                    <button class="btn btn-primary btn-block" id="checkoutBtn">Proceed to Checkout</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--order-history-->
+      <div class="tab-pane fade min-vh-100" id="order-history" role="tabpanel" aria-labelledby="order-history-list">
+        <h1 class="my-4 text-center">Order History</h1>
+        <div class="container col-lg-8 " id="Orderplaceholder">
+                   
+        </div>
+
+      </div>
+      <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+        ...settings...</div>
+    </div>
+  </div>
+
+  <!--Models-->
+  <div class="modal fade" id="productModal">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content" id="modalPlaceholder">
+        </div>
+    </div>
+</div>
+  <footer class="bg-light py-4">
+    <!-- Footer Content Here -->
+    <div class="container text-center">
+      <p>&copy; 2023 SellHere. All rights reserved.</p>
+    </div>
+  </footer>
+  <!-- Add Bootstrap JS and Popper.js links (for Bootstrap components) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script type="module" src="/js/customerScript.js"></script>
+  <script type="module" src="/js/cart.js"></script>
+  <script type="module" src="/js/orderHistory.js"></script>
+  <script type="module" src="/js/helperFunctions.mjs"></script>
+</body>
+
+</html>
